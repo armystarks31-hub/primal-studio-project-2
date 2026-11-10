@@ -126,3 +126,12 @@ nav a:active { background: var(--ivory); color: var(--charcoal); }
 #pos .secondary { background: var(--ivory); }
 #pos .secondary:hover { background: var(--charcoal); }
 #pos .secondary:active { background: var(--ivory); }
+
+.section-feature {
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.section-image img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
