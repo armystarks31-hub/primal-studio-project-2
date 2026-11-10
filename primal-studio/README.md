@@ -2,7 +2,7 @@
 
 Nicholas Starks · DGN 340 Web Design 1
 
-Open `index.html` in a browser or use VS Code Live Server. Home introduces the studio and includes an inquiry guide, a general-area map, and an FAQ. Photography has a filterable concept gallery with a keyboard-accessible enlarged view. Barbering shows a finished haircut and an interactive comparison of two style concepts.
+Open `index.html` in a browser or use VS Code Live Server. Home introduces the studio and includes an inquiry guide, a general-area map, and an FAQ. Photography has a filterable concept gallery with a keyboard-accessible enlarged view, a portrait price menu, and a demo checkout with a 30% deposit preview. Barbering shows a finished haircut and an interactive comparison of two style concepts.
 
 All three pages share the same stylesheet and deferred script. The menu marks the current page using `aria-current`. Images in the photography gallery and the barbering style studies are AI-generated concepts, credited in their captions. The inquiry guide describes what to include in a session request. A public booking channel and an original process video are still pending.
 

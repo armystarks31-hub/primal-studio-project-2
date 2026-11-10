@@ -96,3 +96,33 @@ nav a:active { background: var(--ivory); color: var(--charcoal); }
   .hero { grid-template-columns: minmax(0,1fr); }
   .map { height: 16rem; }
 }
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1rem;
+}
+.package-card, .order-summary {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+}
+.package-card { display: flex; flex-direction: column; align-items: start; }
+.package-card .button { margin-top: auto; }
+.order-summary { background: var(--ivory); }
+.booking-fields { display: grid; gap: .5rem; align-content: start; min-width: 0; }
+.booking-fields label { font-weight: 700; }
+.booking-fields select {
+  width: 100%;
+  min-width: 0;
+  font: inherit;
+  color: var(--charcoal);
+  background: var(--ivory);
+  border: 1px solid var(--teal);
+  padding: .55rem;
+}
+.booking-fields select:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.order-summary dd { font-weight: 700; margin: 0 0 .65rem; }
+#checkout-result:not(:empty) { margin-top: 1rem; }
+#pos .secondary { background: var(--ivory); }
+#pos .secondary:hover { background: var(--charcoal); }
+#pos .secondary:active { background: var(--ivory); }
