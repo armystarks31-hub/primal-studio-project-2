@@ -1,16 +1,3 @@
-// Set your public email address here. Never put a password in this file.
-const PUBLIC_EMAIL = "";
-
-// Turn all inquiry buttons into mailto links when your address is configured.
-document.querySelectorAll("[data-email]").forEach(link => {
-  if (PUBLIC_EMAIL) {
-    link.href = `mailto:${PUBLIC_EMAIL}?subject=${encodeURIComponent(link.dataset.subject)}`;
-  }
-});
-if (PUBLIC_EMAIL && document.querySelector("#email-note")) {
-  document.querySelector("#email-note").textContent = PUBLIC_EMAIL;
-}
-
 // Photography category filters. All six images remain available without JS.
 const filterButtons = document.querySelectorAll("[data-filter]");
 filterButtons.forEach(button => {
@@ -42,7 +29,7 @@ if (lightbox) {
   lightbox.querySelector(".close-dialog").addEventListener("click", () => lightbox.close());
 }
 
-// Before-and-after reveal, controlled by a keyboard-accessible range input.
+// Style comparison reveal, controlled by a keyboard-accessible range input.
 const comparisonRange = document.querySelector("#comparison-range");
 if (comparisonRange) {
   comparisonRange.addEventListener("input", () => {
