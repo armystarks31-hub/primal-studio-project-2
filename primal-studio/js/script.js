@@ -1,16 +1,3 @@
-// Set your public email address here. Never put a password in this file.
-const PUBLIC_EMAIL = "";
-
-// Turn all inquiry buttons into mailto links when your address is configured.
-document.querySelectorAll("[data-email]").forEach(link => {
-  if (PUBLIC_EMAIL) {
-    link.href = `mailto:${PUBLIC_EMAIL}?subject=${encodeURIComponent(link.dataset.subject)}`;
-  }
-});
-if (PUBLIC_EMAIL && document.querySelector("#email-note")) {
-  document.querySelector("#email-note").textContent = PUBLIC_EMAIL;
-}
-
 // Photography category filters. All six images remain available without JS.
 const filterButtons = document.querySelectorAll("[data-filter]");
 filterButtons.forEach(button => {
@@ -42,11 +29,42 @@ if (lightbox) {
   lightbox.querySelector(".close-dialog").addEventListener("click", () => lightbox.close());
 }
 
-// Before-and-after reveal, controlled by a keyboard-accessible range input.
+// Style comparison reveal, controlled by a keyboard-accessible range input.
 const comparisonRange = document.querySelector("#comparison-range");
 if (comparisonRange) {
   comparisonRange.addEventListener("input", () => {
     document.querySelector(".comparison").style.setProperty("--reveal", `${comparisonRange.value}%`);
     document.querySelector("#comparison-value").value = `${comparisonRange.value}%`;
   });
+}
+
+// Class checkout preview. Prices are stored in cents on the package options.
+const bookingForm = document.querySelector("#booking-demo");
+if (bookingForm) {
+  const packageSelect = bookingForm.querySelector("#booking-package");
+  const checkoutResult = bookingForm.querySelector("#checkout-result");
+  const formatPrice = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" });
+  const updateSummary = () => {
+    const selected = packageSelect.selectedOptions[0];
+    const subtotal = Number(selected.dataset.price);
+    const deposit = Math.round(subtotal * 0.30);
+    bookingForm.querySelector("#booking-total").value = formatPrice.format(subtotal / 100);
+    bookingForm.querySelector("#booking-deposit").value = formatPrice.format(deposit / 100);
+    bookingForm.querySelector("#booking-balance").value = formatPrice.format((subtotal - deposit) / 100);
+    bookingForm.querySelector("#booking-venue").textContent = `Setting: ${selected.dataset.venue}`;
+    checkoutResult.textContent = "";
+  };
+  bookingForm.addEventListener("change", updateSummary);
+  document.querySelectorAll("[data-package]").forEach(link => {
+    link.addEventListener("click", () => {
+      packageSelect.value = link.dataset.package;
+      updateSummary();
+    });
+  });
+  bookingForm.addEventListener("submit", event => {
+    event.preventDefault();
+    checkoutResult.textContent = "Demo complete. No payment was taken and no appointment was created.";
+  });
+  updateSummary();
+  bookingForm.querySelector('button[type="submit"]').disabled = false;
 }
