@@ -135,3 +135,9 @@ nav a:active { background: var(--ivory); color: var(--charcoal); }
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
+/* Frame each photograph */
+img {
+  border: 3px solid var(--teal, #006b68);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
