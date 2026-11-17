@@ -2,71 +2,176 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Primal Studio: photography and barbering portfolio by Nicholas Starks.">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
   <title>Holy Grail | Primal Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
   <script src="js/script.js" defer></script>
+
+  <style>
+    /* Three columns between the header and footer */
+    .holy-layout {
+      display: grid;
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 2fr)
+        minmax(0, 1fr);
+      gap: 1.5rem;
+      padding-block: 2rem;
+    }
+
+    .holy-layout > * {
+      min-width: 0;
+      padding: 1.5rem;
+      border: 1px solid #006b68;
+      overflow-wrap: anywhere;
+    }
+
+    .holy-layout h1 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+    }
+
+    .holy-layout h2 {
+      margin-top: 1.5rem;
+      font-size: 1.5rem;
+    }
+
+    .holy-layout img {
+      width: 100%;
+      height: auto;
+      border: 3px solid #006b68;
+      border-radius: 8px;
+    }
+
+    .holy-layout li {
+      margin-bottom: 0.75rem;
+    }
+
+    @media (max-width: 850px) {
+      .holy-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
 </head>
+
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="container header-inner"><a class="brand" href="index.html">PRIMAL <span>STUDIO</span><small>PHOTOGRAPHY + BARBERING</small></a>
-<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="photography.html">Photography</a><a href="barbering.html">Barbering</a>
-<a href="holy-grail.html" aria-current="page">Holy Grail</a>
-</nav>
-</div>
-</header>
-<!-- Holy Grail layout: full-width header and footer, two sidebars and center content. -->
-<main id="main" class="container holy-grail-layout">
-<aside class="holy-sidebar" aria-labelledby="explore-heading">
-<h2 id="explore-heading">Explore Primal</h2>
-<ul class="holy-links">
-<li><a href="index.html">Home</a></li>
-<li><a href="photography.html">Photography</a></li>
-<li><a href="barbering.html">Barbering</a></li>
-<li><a href="photography.html#booking">Portrait packages</a></li>
-<li><a href="barbering.html#barbering-pricing">Barbering prices</a></li>
-</ul>
-<p>Start with a fresh look, then build the image you want to share.</p>
-</aside>
-<article class="holy-content">
-<p class="eyebrow">PRIMAL STUDIO / HOLY GRAIL</p>
-<h1>One studio.<br>A complete look.</h1>
-<p class="lead">Barbering, photography, and personal branding come together through attention to shape, light, and personality.</p>
-<figure>
-<img src="images/studio-barber-and-photo.png" alt="Barber chair with a photography backdrop and softbox in a window-lit studio." width="1536" height="1024" loading="lazy">
-<figcaption>Combined barbering and photography space · AI-generated studio concept.</figcaption>
-</figure>
-<h2>Shape your style</h2>
-<p>A haircut sets the outline. A beard trim brings definition. Together, those details create a starting point for how you want to present yourself.</p>
-<h2>Capture your presence</h2>
-<p>A portrait carries that look into your personal or professional image. Lighting, clothing, background, and expression help communicate your personality.</p>
-<h2>Build a consistent image</h2>
-<p>A portrait, a wordmark, and a considered color palette can give your personal brand a consistent direction across a website, profile, or business card.</p>
-<div class="actions">
-<a class="button" href="photography.html#booking">Explore Portrait Packages</a>
-<a class="button secondary" href="index.html">Back to Home</a>
-</div>
-</article>
-<aside class="holy-sidebar" aria-labelledby="plan-heading">
-<h2 id="plan-heading">Plan your visit</h2>
-<p>Primal Studio · Long Beach, California</p>
-<h3>Bring your ideas</h3>
-<p>Think about your haircut, the purpose of your portraits, and the impression you want your brand to make.</p>
-<a class="text-link" href="index.html#contact">Read the inquiry guide</a>
-<h3 class="holy-note-heading">About this layout</h3>
-<p>This page uses a header, left sidebar, main article, right sidebar, and footer. The desktop columns use a 1fr 2fr 1fr grid and stack on smaller screens.</p>
-</aside>
-</main>
-<footer class="site-footer">
-<div class="container footer-inner">
-<p>Primal Studio · Nicholas Starks<br>DGN 340 · Project 2 · Draft 2</p><a href="index.html#contact">Inquiry guide</a>
-<p>Photography + Barbering · Long Beach, California</p>
-</div>
-</footer>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Full-width header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        PRIMAL <span>STUDIO</span>
+        <small>PHOTOGRAPHY + BARBERING</small>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="photography.html">Photography</a>
+        <a href="barbering.html">Barbering</a>
+        <a href="holy-grail.html" aria-current="page">
+          Holy Grail
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container holy-layout">
+
+    <!-- Left sidebar -->
+    <aside aria-labelledby="explore-title">
+      <h2 id="explore-title">Explore the studio</h2>
+
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="photography.html">Photography</a>
+        </li>
+        <li><a href="barbering.html">Barbering</a></li>
+        <li>
+          <a href="photography.html#booking">
+            Portrait packages
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Center column -->
+    <article>
+      <p class="eyebrow">THE PRIMAL EXPERIENCE</p>
+
+      <h1>Shape your look.<br>Build your image.</h1>
+
+      <p>
+        Primal Studio brings barbering, photography,
+        and personal branding together.
+      </p>
+
+      <figure>
+        <img
+          src="images/studio-barber-and-photo.png"
+          alt="Barber chair beside a photography backdrop
+               and studio lighting."
+          width="1536"
+          height="1024"
+        >
+        <figcaption>
+          Primal Studio interior concept · AI-generated image.
+        </figcaption>
+      </figure>
+
+      <h2>Start with your style</h2>
+      <p>
+        A considered haircut and beard trim create
+        a defined look that feels personal.
+      </p>
+
+      <h2>Capture your personality</h2>
+      <p>
+        Portrait lighting, expression, and setting
+        help communicate who you are.
+      </p>
+
+      <h2>Bring your brand together</h2>
+      <p>
+        A portrait, wordmark, and color palette can
+        create a consistent image across your website,
+        profiles, and business cards.
+      </p>
+
+      <a class="button" href="photography.html#booking">
+        Explore Portrait Packages
+      </a>
+    </article>
+
+    <!-- Right sidebar -->
+    <aside aria-labelledby="visit-title">
+      <h2 id="visit-title">Plan your visit</h2>
+
+      <p>Long Beach, California</p>
+
+      <h2>Bring your ideas</h2>
+      <p>
+        Consider your preferred haircut, portrait style,
+        and the impression you want to make.
+      </p>
+
+      <a href="index.html#contact">
+        Read the inquiry guide
+      </a>
+    </aside>
+
+  </main>
+
+  <!-- Full-width footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Primal Studio · Nicholas Starks</p>
+      <a href="index.html">Back to Home</a>
+    </div>
+  </footer>
 </body>
 </html>
