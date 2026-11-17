@@ -2,176 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>Holy Grail | Primal Studio</title>
-
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
-
-  <style>
-    /* Three columns between the header and footer */
-    .holy-layout {
-      display: grid;
-      grid-template-columns:
-        minmax(0, 1fr)
-        minmax(0, 2fr)
-        minmax(0, 1fr);
-      gap: 1.5rem;
-      padding-block: 2rem;
-    }
-
-    .holy-layout > * {
-      min-width: 0;
-      padding: 1.5rem;
-      border: 1px solid #006b68;
-      overflow-wrap: anywhere;
-    }
-
-    .holy-layout h1 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
-    }
-
-    .holy-layout h2 {
-      margin-top: 1.5rem;
-      font-size: 1.5rem;
-    }
-
-    .holy-layout img {
-      width: 100%;
-      height: auto;
-      border: 3px solid #006b68;
-      border-radius: 8px;
-    }
-
-    .holy-layout li {
-      margin-bottom: 0.75rem;
-    }
-
-    @media (max-width: 850px) {
-      .holy-layout {
-        grid-template-columns: minmax(0, 1fr);
-      }
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Holy Grail Layout</title>
+  <link rel="stylesheet" href="holy-grail.css">
 </head>
-
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <div class="page">
+    <header class="header">Header</header>
 
-  <!-- Full-width header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        PRIMAL <span>STUDIO</span>
-        <small>PHOTOGRAPHY + BARBERING</small>
-      </a>
-
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="photography.html">Photography</a>
-        <a href="barbering.html">Barbering</a>
-        <a href="holy-grail.html" aria-current="page">
-          Holy Grail
-        </a>
-      </nav>
+    <div class="middle">
+      <aside class="left-sidebar">Left Sidebar</aside>
+      <main class="main-content">Main Content</main>
+      <aside class="right-sidebar">Right Sidebar</aside>
     </div>
-  </header>
 
-  <main id="main" class="container holy-layout">
-
-    <!-- Left sidebar -->
-    <aside aria-labelledby="explore-title">
-      <h2 id="explore-title">Explore the studio</h2>
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li>
-          <a href="photography.html">Photography</a>
-        </li>
-        <li><a href="barbering.html">Barbering</a></li>
-        <li>
-          <a href="photography.html#booking">
-            Portrait packages
-          </a>
-        </li>
-      </ul>
-    </aside>
-
-    <!-- Center column -->
-    <article>
-      <p class="eyebrow">THE PRIMAL EXPERIENCE</p>
-
-      <h1>Shape your look.<br>Build your image.</h1>
-
-      <p>
-        Primal Studio brings barbering, photography,
-        and personal branding together.
-      </p>
-
-      <figure>
-        <img
-          src="images/studio-barber-and-photo.png"
-          alt="Barber chair beside a photography backdrop
-               and studio lighting."
-          width="1536"
-          height="1024"
-        >
-        <figcaption>
-          Primal Studio interior concept · AI-generated image.
-        </figcaption>
-      </figure>
-
-      <h2>Start with your style</h2>
-      <p>
-        A considered haircut and beard trim create
-        a defined look that feels personal.
-      </p>
-
-      <h2>Capture your personality</h2>
-      <p>
-        Portrait lighting, expression, and setting
-        help communicate who you are.
-      </p>
-
-      <h2>Bring your brand together</h2>
-      <p>
-        A portrait, wordmark, and color palette can
-        create a consistent image across your website,
-        profiles, and business cards.
-      </p>
-
-      <a class="button" href="photography.html#booking">
-        Explore Portrait Packages
-      </a>
-    </article>
-
-    <!-- Right sidebar -->
-    <aside aria-labelledby="visit-title">
-      <h2 id="visit-title">Plan your visit</h2>
-
-      <p>Long Beach, California</p>
-
-      <h2>Bring your ideas</h2>
-      <p>
-        Consider your preferred haircut, portrait style,
-        and the impression you want to make.
-      </p>
-
-      <a href="index.html#contact">
-        Read the inquiry guide
-      </a>
-    </aside>
-
-  </main>
-
-  <!-- Full-width footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Primal Studio · Nicholas Starks</p>
+    <footer class="footer">
+      Footer
       <a href="index.html">Back to Home</a>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </body>
 </html>
