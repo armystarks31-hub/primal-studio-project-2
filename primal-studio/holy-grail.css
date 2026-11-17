@@ -1,40 +1,73 @@
-/* Matches the page, middle and sidebar classes in holy-grail.html. */
+/* Class Holy Grail structure with the Primal mood-board palette.
+   Charcoal #171C1E, ivory #F5F2EB, teal #006B68. */
 .page {
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
 }
+.header,
+.left-sidebar,
+.main-content,
+.right-sidebar,
+.footer {
+  padding: 1.5rem;
+  border-radius: .75rem;
+}
+.header {
+  position: static;
+  min-height: 6.25rem;
+  background: var(--charcoal);
+  color: var(--ivory);
+}
+.header-inner { width: 100%; padding: 0; flex-wrap: wrap; }
 .middle {
-  width: min(1200px, 90%);
-  margin-inline: auto;
+  flex: 1;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
-  gap: 1.5rem;
-  padding-block: 2rem;
-  align-items: start;
+  gap: 1rem;
 }
-.middle > * {
-  min-width: 0;
-  overflow-wrap: anywhere;
+.middle > * { min-width: 0; overflow-wrap: anywhere; }
+.left-sidebar { background: var(--teal); color: var(--ivory); }
+.main-content {
+  background: var(--ivory);
+  color: var(--charcoal);
+  border: 2px solid var(--teal);
 }
-.left-sidebar,
-.right-sidebar {
-  border: 1px solid var(--teal);
-  padding: 1.25rem;
-}
+.right-sidebar { background: var(--charcoal); color: var(--ivory); }
 .middle h2 { font-size: 1.5rem; margin-top: 1.5rem; }
 .main-content h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
 .main-content figure { margin-block: 1.5rem; }
 .middle li { margin-bottom: .75rem; }
-.footer {
-  background: var(--charcoal);
-  color: var(--ivory);
-  padding: 1.5rem 5%;
+.layout-label {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
 }
+.main-content .layout-label { color: var(--teal); }
+.footer {
+  background: var(--teal);
+  color: var(--ivory);
+  min-height: 6.25rem;
+}
+.left-sidebar a,
+.right-sidebar a,
 .footer a { color: var(--ivory); }
+.left-sidebar a:hover,
+.left-sidebar a:active,
+.right-sidebar a:hover,
+.right-sidebar a:active,
 .footer a:hover,
-.footer a:active { color: #a8d9d1; }
-@media (max-width: 900px) {
+.footer a:active {
+  background: var(--ivory);
+  color: var(--charcoal);
+}
+.footer a { display: block; width: fit-content; margin-top: .75rem; }
+@media (max-width: 650px) {
   .middle { grid-template-columns: minmax(0, 1fr); }
-  .header-inner { flex-wrap: wrap; }
+  .left-sidebar,
+  .main-content,
+  .right-sidebar { min-height: 9.375rem; }
+  .header, .left-sidebar, .main-content, .right-sidebar, .footer { padding: 1rem; }
 }
