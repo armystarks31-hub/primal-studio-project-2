@@ -135,3 +135,33 @@ nav a:active { background: var(--ivory); color: var(--charcoal); }
   aspect-ratio: 3 / 2;
   object-fit: cover;
 }
+
+/* Holy Grail page: sidebar, main article, sidebar. */
+.holy-grail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  gap: 2rem;
+  padding-block: 3rem;
+  align-items: start;
+}
+.holy-grail-layout > * { min-width: 0; overflow-wrap: anywhere; }
+.holy-sidebar {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+}
+.holy-sidebar h2 { font-size: 1.5rem; }
+.holy-sidebar h3 { font-size: 1.25rem; }
+.holy-links { padding-left: 1.25rem; }
+.holy-links li { margin-bottom: .75rem; }
+.holy-content h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.holy-content h2 { margin-top: 2rem; font-size: 1.75rem; }
+.holy-content figure { margin-block: 1.5rem; }
+.holy-content img {
+  border: 3px solid var(--teal);
+  border-radius: .5rem;
+}
+.holy-note-heading { margin-top: 2rem; }
+@media (max-width: 900px) {
+  .holy-grail-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+  .header-inner { flex-wrap: wrap; }
+}
