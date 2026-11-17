@@ -3,21 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Holy Grail Layout</title>
+  <title>Holy Grail | Primal Studio</title>
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="holy-grail.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <a class="skip" href="#main">Skip to content</a>
   <div class="page">
-    <header class="header">Header</header>
+<header class="site-header">
+<div class="container header-inner"><a class="brand" href="index.html">PRIMAL <span>STUDIO</span><small>PHOTOGRAPHY + BARBERING</small></a>
+<nav aria-label="Main navigation"><a href="index.html">Home</a><a href="photography.html">Photography</a><a href="barbering.html">Barbering</a>
+<a href="holy-grail.html" aria-current="page">Holy Grail</a>
+</nav>
+</div>
+</header>
 
     <div class="middle">
-      <aside class="left-sidebar">Left Sidebar</aside>
-      <main class="main-content">Main Content</main>
-      <aside class="right-sidebar">Right Sidebar</aside>
+      <aside class="left-sidebar">
+        <h2>Explore Primal</h2>
+        <p>Find your next look and plan your portrait.</p>
+        <ul>
+          <li><a href="photography.html">Photography</a></li>
+          <li><a href="barbering.html">Barbering</a></li>
+          <li><a href="photography.html#booking">Portrait packages</a></li>
+        </ul>
+      </aside>
+      <main class="main-content" id="main">
+        <p class="eyebrow">PRIMAL STUDIO / HOLY GRAIL</p>
+        <h1>One studio.<br>A complete look.</h1>
+        <p>Barbering, photography, and personal branding come together through shape, light, and personality.</p>
+        <figure>
+          <img src="images/studio-barber-and-photo.png" alt="Barber chair beside a photography backdrop and softbox in a window-lit studio." width="1536" height="1024">
+          <figcaption>Primal Studio interior · AI-generated concept.</figcaption>
+        </figure>
+        <h2>Shape your style</h2>
+        <p>A haircut and beard trim establish a look that feels personal. A portrait captures that presence for a profile, portfolio, or personal brand.</p>
+        <a class="button" href="photography.html#booking">Explore Portrait Packages</a>
+      </main>
+      <aside class="right-sidebar">
+        <h2>Plan your visit</h2>
+        <p>Long Beach, California</p>
+        <p>Bring haircut references and ideas for the impression you want your portraits to make.</p>
+        <a href="index.html#contact">Read the inquiry guide</a>
+      </aside>
     </div>
 
     <footer class="footer">
-      Footer
+      <p>Primal Studio · Nicholas Starks</p>
       <a href="index.html">Back to Home</a>
     </footer>
   </div>

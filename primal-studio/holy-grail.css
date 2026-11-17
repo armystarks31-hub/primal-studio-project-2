@@ -1,0 +1,40 @@
+/* Matches the page, middle and sidebar classes in holy-grail.html. */
+.page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.middle {
+  width: min(1200px, 90%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  padding-block: 2rem;
+  align-items: start;
+}
+.middle > * {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.left-sidebar,
+.right-sidebar {
+  border: 1px solid var(--teal);
+  padding: 1.25rem;
+}
+.middle h2 { font-size: 1.5rem; margin-top: 1.5rem; }
+.main-content h1 { font-size: clamp(2rem, 4vw, 3.5rem); }
+.main-content figure { margin-block: 1.5rem; }
+.middle li { margin-bottom: .75rem; }
+.footer {
+  background: var(--charcoal);
+  color: var(--ivory);
+  padding: 1.5rem 5%;
+}
+.footer a { color: var(--ivory); }
+.footer a:hover,
+.footer a:active { color: #a8d9d1; }
+@media (max-width: 900px) {
+  .middle { grid-template-columns: minmax(0, 1fr); }
+  .header-inner { flex-wrap: wrap; }
+}
