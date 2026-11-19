@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Primal Studio: photography and barbering portfolio by Nicholas Starks.">
+  <meta name="description" content="Explore Primal Studio’s portrait and lighting studies, photography packages, and sample booking flow.">
   <title>Photography | Primal Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,12 @@
 </nav>
 </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 <section class="page-intro container">
 <p class="eyebrow">PRIMAL STUDIO / PHOTOGRAPHY</p>
 <h1>Personality in focus.</h1>
-<p class="lead">Portraits, graduation moments, and events through a personal lens.</p><a class="button" href="index.html#contact">Plan a Photo Inquiry</a> <a class="button secondary" href="#booking">See Portrait Packages</a>
+<p class="lead">Portraits, graduation moments, and events through a personal lens.</p>
+<div class="actions"><a class="button" href="index.html#contact">Plan a Photo Inquiry</a> <a class="button secondary" href="#booking">See Portrait Packages</a></div>
 </section>
 <section class="section container">
 <div class="section-heading">
@@ -31,7 +32,7 @@
 <p class="eyebrow">SELECTED IMAGES</p>
 <h2>Photography gallery</h2>
 </div>
-<p class="small">Portrait and studio concepts exploring light, styling, and setting.</p>
+<p class="small">Explore portrait and studio concepts by category. Select an image to see it full size.</p>
 </div>
 <div class="filters" role="group" aria-label="Filter photography gallery"><button data-filter="all" aria-pressed="true">All</button><button data-filter="portraits" aria-pressed="false">Portraits</button><button data-filter="setups" aria-pressed="false">Studio setups</button>
 </div>
@@ -180,7 +181,7 @@
 <option>Saturday at 11:30 a.m.</option>
 <option>Sunday at 2:00 p.m.</option>
 </select>
-<p id="booking-venue"></p>
+<p id="booking-venue">Setting: Seasonal pop-up</p>
 </div>
 <div class="order-summary">
 <h3>Order summary</h3>
@@ -192,20 +193,20 @@
 <p class="small">Taxes, extras, and balance due dates are pending launch.</p>
 </div>
 </div>
-<div class="actions"><button class="button" type="submit" disabled>Demo Checkout</button><a class="button secondary" href="#booking">Back to Packages</a></div>
+<div class="actions"><button class="button" type="submit" disabled>Preview Booking</button><a class="button secondary" href="#booking">Back to Packages</a></div>
 <p id="checkout-result" role="status"></p>
 <noscript><p>Enable JavaScript to use the checkout preview.</p></noscript>
 </form>
 </div>
 </section>
-<dialog id="lightbox" aria-label="Enlarged gallery image"><button class="close-dialog" aria-label="Close enlarged image">Close ×</button><img id="lightbox-image" alt="">
+<dialog id="lightbox" aria-label="Enlarged gallery image" aria-describedby="lightbox-caption"><button class="close-dialog" aria-label="Close enlarged image">Close ×</button><img id="lightbox-image" src="images/portrait-textured-curls.png" alt="">
 <p id="lightbox-caption">
 </p>
 </dialog>
 </main>
 <footer class="site-footer">
 <div class="container footer-inner">
-<p>Primal Studio · Nicholas Starks<br>DGN 340 · Project 2 · Draft 2</p><a href="index.html#contact">Inquiry guide</a>
+<p>Primal Studio · Nicholas Starks<br>DGN 340 · Project 2 · Final Draft</p><div class="footer-links"><a href="index.html#contact">Inquiry guide</a><a href="holy-grail.html">Holy Grail class exercise</a></div>
 <p>Photography + Barbering · Long Beach, California</p>
 </div>
 </footer>
