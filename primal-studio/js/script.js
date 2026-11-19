@@ -35,6 +35,7 @@ if (comparisonRange) {
   comparisonRange.addEventListener("input", () => {
     document.querySelector(".comparison").style.setProperty("--reveal", `${comparisonRange.value}%`);
     document.querySelector("#comparison-value").value = `${comparisonRange.value}%`;
+    comparisonRange.setAttribute("aria-valuetext", `${comparisonRange.value}% curls`);
   });
 }
 
@@ -59,6 +60,7 @@ if (bookingForm) {
     link.addEventListener("click", () => {
       packageSelect.value = link.dataset.package;
       updateSummary();
+      packageSelect.focus({ preventScroll: true });
     });
   });
   bookingForm.addEventListener("submit", event => {

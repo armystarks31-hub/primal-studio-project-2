@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Primal Studio: photography and barbering portfolio by Nicholas Starks.">
+  <meta name="description" content="Browse haircut examples, compare two finishes, and explore Primal Studio’s barbering menu.">
   <title>Barbering | Primal Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +16,17 @@
 <header class="site-header">
 <div class="container header-inner"><a class="brand" href="index.html">PRIMAL <span>STUDIO</span><small>PHOTOGRAPHY + BARBERING</small></a>
 <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="photography.html">Photography</a><a href="barbering.html" aria-current="page">Barbering</a>
-<a href="holy-grail.html">Holy Grail</a>
 </nav>
 </div>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 <section class="hero container">
 <div>
 <p class="eyebrow">PRIMAL STUDIO / BARBERING</p>
 <h1>Style starts<br>with the details.</h1>
-<p class="lead">A thoughtful look at shape, texture, and personal expression.</p><a class="button" href="index.html#contact">Plan a Barbering Inquiry</a> <a class="button secondary" href="#barbering-pricing">View Barbering Prices</a> <a class="text-link" href="#primal-makeover">Watch the Makeover</a>
+<p class="lead">A thoughtful look at shape, texture, and personal expression.</p><div class="actions"><a class="button" href="index.html#contact">Plan a Barbering Inquiry</a> <a class="button secondary" href="#barbering-pricing">View Barbering Prices</a> <a class="text-link" href="#primal-makeover">Watch the Makeover</a></div>
 </div>
-<figure><img src="images/Jacksonhaircut.jpeg" alt="Close view of a finished haircut" width="768" height="1024" loading="lazy"><figcaption>Finished haircut · Primal Studio portfolio</figcaption></figure>
+<figure><img src="images/Jacksonhaircut.jpeg" alt="Close view of a finished haircut" width="768" height="1024"><figcaption>Finished haircut · Primal Studio portfolio</figcaption></figure>
 </section>
 <section class="section container">
 <h2>A barber’s perspective</h2>
@@ -45,7 +44,7 @@
 <p>Move the slider to compare two AI-generated style concepts. The curly finish keeps more height on top. The wavy finish emphasizes the taper.</p>
 <div class="comparison"><img src="images/haircut-waves-and-taper.png" alt="Wavy top and tapered sides" width="1536" height="1024"><img class="comparison-overlay" src="images/haircut-textured-curls.png" alt="Textured curls and shorter sides" width="1536" height="1024"><span class="comparison-label label-right">Waves</span><span class="comparison-label label-left">Curls</span></div>
 <label class="range-label" for="comparison-range">Reveal curls <output id="comparison-value" for="comparison-range">50%</output></label>
-<input id="comparison-range" type="range" min="0" max="100" value="50">
+<input id="comparison-range" type="range" aria-valuetext="50% curls" min="0" max="100" value="50">
 </section>
 <section class="section container" id="primal-makeover">
 <p class="eyebrow">BARBERING · PORTRAITS · PERSONAL BRANDING</p>
@@ -120,7 +119,7 @@
 </main>
 <footer class="site-footer">
 <div class="container footer-inner">
-<p>Primal Studio · Nicholas Starks<br>DGN 340 · Project 2 · Draft 2</p><a href="index.html#contact">Inquiry guide</a>
+<p>Primal Studio · Nicholas Starks<br>DGN 340 · Project 2 · Final Draft</p><div class="footer-links"><a href="index.html#contact">Inquiry guide</a><a href="holy-grail.html">Holy Grail class exercise</a></div>
 <p>Photography + Barbering · Long Beach, California</p>
 </div>
 </footer>
